@@ -1,38 +1,5 @@
-## React drag from grid demo
-This demo contains a React drag from grid example. It shows how to configure Scheduler and Grid on one page and how to enable dragging between them.
-
-Please mind that Grid is licensed separately.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Bryntum Shared Library
-
-This example uses BryntumScheduler wrapper which is implemented in shared library.
- 
-Library package is located in `examples/react/_shared` folder. 
-
-This library is automatically installed and built during `npm install` for the example by `preinstall` script in `package.json` so it not required do it separately.    
-
-To install and build it manually go to library folder and run:
-
-```
-npm install
-npm run build
-```
-
-## Start development server
-
-To start development server run: 
-
-```
-npm install
-npm start
-``` 
-
-This runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## How to use
+You can run the solution in 2 ways. The build folder contains a compiled version of the application and can be run using php -S localhost:8000. Or you can start the application with NodeJS from the root. This will require a npm install and then can be started using npm run start.
 
 ## Build example
 
