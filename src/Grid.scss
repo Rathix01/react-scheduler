@@ -1,0 +1,76 @@
+/* 
+
+    Overrides 
+
+    The styles below override the visual properties of the grid component.
+    Some of the styles that are being overridden are declared in a style="" property
+    and therefore require the !important tag to change.
+
+*/
+
+#unplannedContainer {
+  min-width: 325px;
+
+  #b-unplannedgrid-1 {
+    background: #f3f4f5;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .b-grid-header-container {
+    display: none;
+  }
+
+  .b-grid-subgrid {
+    background-image: none !important;
+
+    .b-grid-row {
+      background-color: transparent !important;
+
+      .b-grid-cell {
+        position: relative;
+        border: none;
+        background-color: transparent !important;
+
+        .unassigned-task {
+          padding: 10px;
+          background: #fff;
+          display: flex;
+          height: 44px;
+          align-items: center;
+          color: #000;
+          position: absolute;
+          filter: drop-shadow(1px 1px 2px #ccc);
+        }
+
+        .unassigned-task.left-column {
+          right: 0;
+          width: 205px;
+          border-left: solid 4px #3a7bdb;
+          font-size: 1.2em;
+          transition: border 200ms ease-in-out;
+        }
+
+        .unassigned-task.right-column {
+          left: 0;
+          width: 80px;
+          justify-content: flex-end;
+          font-weight: 999;
+          font-size: 1.2em;
+        }
+      }
+
+      .b-grid-cell:hover {
+        transform: translateY(-1px);
+        .unassigned-task.left-column {
+          border-left: solid 4px #b90a00;
+        }
+      }
+
+      .b-grid-cell.b-focused:after {
+        border-color: none !important;
+        opacity: 0;
+      }
+    }
+  }
+}

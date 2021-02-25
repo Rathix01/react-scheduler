@@ -1,0 +1,81 @@
+/**
+ * Main App scss file
+ */
+
+@import "Grid";
+
+.b-sch-event {
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  .b-react-schedulerpro-container {
+    flex: 1 1 0;
+    overflow: hidden;
+  }
+
+  #unplannedContainer {
+    width: 300px;
+
+    .b-gridbase {
+      flex: none;
+      border-left: 2px solid #aaa;
+
+      .b-grid-cell {
+        cursor: pointer;
+      }
+
+      i {
+        margin-right: 10px;
+        color: #4887e5;
+      }
+    }
+  }
+}
+
+.b-grid-header {
+  height: 57px;
+}
+
+.b-sch-event.b-drag-invalid {
+  background: red;
+}
+
+.b-unassigned-class.b-drag-proxy:not(.b-drag-invalid) {
+  background: green;
+}
+
+.b-aborting.b-unassigned-class {
+  transition: transform 0.3s !important;
+
+  // https://app.assembla.com/spaces/bryntum/tickets/7168-drag-drop-cleanup-code-on-abort-is-interfering-with-animation/details#
+  background: red;
+  position: absolute !important;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0.8;
+  box-sizing: border-box;
+}
+
+.demo-header {
+  .side-panel-header {
+    width: 325px;
+    background: #3a7bdb;
+    height: 98px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 1.8em;
+  }
+}
+
+// eof
